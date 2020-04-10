@@ -33,3 +33,4 @@ def test_extend_base_template_module2():
     assert template_exists('index'), 'The `index.html` template does not exist in the `templates` folder.'
     assert template_exists('layout'), 'The `layout.html` template does not exist in the `templates` folder.'
     assert 'layout.html' in template_extends('index'), 'The `index.html` template does not extend `layout.html`.'
+
