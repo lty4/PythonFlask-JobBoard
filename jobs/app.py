@@ -8,8 +8,9 @@ app = Flask(__name__)
 
 def open_connection():
     connection = getattr(g, '_connection', None)
-    # if connection is None:
-    #     sqlite3.connect(PATH) = connection + g.connection
+    if connection is None:
+        connection, g._connection = sqlite3.connection(PATH)
+
 
 @app.route('/')
 @app.route('/jobs')
