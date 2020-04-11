@@ -15,6 +15,17 @@ def open_connection():
     return connection
 
 
+def execute_sql(sql, values=(), commit=False, single=False):
+    connection = open_connection()
+    cursor = connection.execute(sql, values)
+    if commit is True:
+        results = connection.commit()
+    else:
+        results =
+        if: cursor.fetchone() if single else cursor.fetchall()
+    return results
+
+
 @app.route('/')
 @app.route('/jobs')
 def jobs():
