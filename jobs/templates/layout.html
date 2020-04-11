@@ -7,11 +7,12 @@
       <title>Job Board</title>
   </head>
   <body>
-    <div class="container top">
+  <div class="container top">
       <div class="content">
-        {% block content %}
-        {% endblock %}
+          {% block content %}
+          {% endblock %}
       </div>
-    </div>
+  </div>
   </body>
 </html>
+{% from '_macros.html' import show_job, show_jobs with context %}
